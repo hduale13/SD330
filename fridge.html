@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <meta charset ="UTF-8">
+  <head>
+    <style>
+      .floatRight{
+        float: Right;
+      }
+
+      h2 {
+        font-size: 20px; text-decoration: dotted;
+      }
+      
+      .floatLeft{
+        float: left
+      }
+
+      #div2{
+        background-color: rgb(210, 210, 210);
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .containerFridge{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      button {
+        margin: 10px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #3f51b5;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #1a237e;
+      }
+
+
+      .display {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+    </style>
+  </head>
+
+  <body onload="doStartClock()";>
+
+    <div class="container">
+
+
+      <div class="display">
+        <h2>Clock</h2>
+        <span id="clock-display" class="hidden"></span>
+      </div>
+      <div class="display">
+        <h2>Temperature</h2>
+        <span id="temperature-display" class="hidden"></span>
+      </div>
+      
+      <div class="display">
+        <h2>TV</h2>
+        <span id="tv-display" class="hidden"></span>
+      </div>
+      <div class="display">
+        <h2>Browser</h2>
+        <img id="browser-display" src="browser.png" alt="Browser" class="hidden">
+      </div>
+      <div class="display">
+        <button id="power-button">On</button>
+      </div>
+    </div>
+
+    <div class = "containerFridge">
+      <div class="display">
+        <h2>Fridge</h2>
+          <img id="fridge-display" src="file:///Users/hododuale/Desktop/fridge-closed.png" alt="Fridge" class="hidden">
+        </div></h2>
+      </div>
+    </div>
+
+  <!-- <body>
+    <h2>
+      Hodo's Fridge App
+    </h2>
+    <div id="div1" class = "floatRight">
+      <img src="https://thumbs.dreamstime.com/b/closed-fridge-refrigerator-magnet-sticker-household-appliances-kitchen-freeze-device-isolated-vector-flat-130190590.jpg" alt="closedFridge" width="600" height="750">
+
+    </div>
+
+    <div id="div2" class="floatLeft">
+      <p>Check out all our featues!</p>
+      <h3>
+        Time 
+      </h3>
+
+      <h3>
+        Temperature 
+      </h3>
+
+      <h3>
+        TV 
+      </h3>
+
+      <h3>
+        Browser 
+      </h3> -->
+
+      
+
+
+    </div>
+  </body>
+</html>
