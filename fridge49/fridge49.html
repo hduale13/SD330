@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .container {
+        height:650px;
+        width: 100%;
+        border: 5px outset black;
+        background-color: lightgray;
+
+      }
+
+      .browser{
+        height:210px;
+        width:310px;
+        border: 2px outset rgb(0, 172, 220);
+        background-color: rgb(122, 212, 237);
+
+      }
+
+      /* .weather{
+        height:15px;
+        width:310px;
+        border: 2px outset rgb(0, 172, 220);
+        background-color: rgb(122, 212, 237);
+
+      } */
+
+      .left {
+        position: absolute;
+        top: 100px;
+        left: 16px;
+      }
+
+      .topRight {
+        position: absolute;
+        top: 100px;
+        right: 16px;
+      }
+
+      .music{
+        height:120px;
+        width:310px;
+        border: 2px outset rgb(0, 172, 220);
+        background-color: rgb(174, 221, 234);
+
+      }
+
+      .shoppingList{
+        height:150px;
+        width:310px;
+        border: 2px outset rgb(0, 172, 220);
+        background-color: rgb(122, 212, 237);
+      }
+
+      .interiorTemp{
+        height:200px;
+        width:310px;
+        border: 2px outset rgb(0, 172, 220);
+
+        background-color:rgb(122, 212, 237);
+      }
+      button {
+      width:10%;
+      height:30px;
+      background-color:rgb(122, 212, 237);
+      border:none;
+      color:rgb(0, 0, 0);
+      font-size:20px;
+      cursor:pointer;
+      }
+
+      input{
+      width:10%;
+      height:20px;
+      background-color:#000;
+      border:none;
+      color:#fff;
+      font-size:20px;
+      padding:0;
+      text-align:center;
+      }
+      .degree{
+      color:#fff;
+      position:absolute;
+      top:30px;
+      right:10px;
+      font-size:24px;
+      }
+    
+
+
+      
+
+    </style>
+
+  </head>
+</html>
+
+<body>
+  <button onclick="toggleContent('content-on')">ON - OFF</button>
+
+  <!--overall container2x1-->
+  <div id="content-on" style="display: none;">
+
+    <div class = "container">
+      <h2>Fridge app</h2>
+      
+
+      <!--Div for the viewing inside of fridge-->
+      <div class="view">
+
+      </div>
+
+      <div class="left">
+        <!--Shopping list: Add or remove items-->
+        <div class="shoppingList">
+          <ul>
+            <li>Milk</li>
+            <li>butter</li>
+            <li>egss</li>
+            <li>heavy cream</li>
+            <li>cereal</li>
+          </ul>
+
+          <input type="text" id="item" placeholder="Add Item">
+
+          <button onclick="addItem()">Add</button>
+          <button onclick="removeItem()">Remove</button>
+
+        </div>
+
+        <!--TV div Plays sound-->
+        <div class="music">
+          <h3>Music</h3>
+            <audio controls src="audio.mp3">
+          <p id="display"></p>
+        </div>
+
+        <div class="browser">
+          <h3>Broswer</h3>
+          <img src="browser.png" height="150" width="230">
+        </div>
+      </div>
+        
+
+      <div class="topRight">
+        <!-- <div class="weather">
+          <h3>Weather</h3>
+          <span id="number">0</span>
+          
+        </div> -->
+
+        <div class="interiorTemp">
+          <h3>Weather</h3>
+          <p>55&deg;</p>
+          <h3>Fridge Temperature</h3>
+          <button onclick="addTemp()">ᐱ</button>
+          <input id="TempBox" value="20" type="text">
+          <span class="degree"></span>
+          <button onclick="remTemp()">ᐯ</button>
+      </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <div id="content-off">
+
+
+  
+
+  <script>
+    // const number = document.getElementById("number");
+
+    // // const randomNumberGenerator = () -> {
+    // //   const randomNumber = Math.floor(Math.random() * 90 + 1);
+    // //   console.log(randomNumber);
+    // // }
+
+    // randomNumberGenerator();
+
+    function toggleContent(contentId) {
+			var content = document.getElementById(contentId);
+			if (content.style.display === "none") {
+				content.style.display = "block";
+			}
+      
+      else {
+				content.style.display = "none";
+			}
+		}
+    //audio file  
+    var x = document.getElementById("myAudio"); 
+
+    function playAudio() { 
+      x.play(); 
+    } 
+
+    function pauseAudio() { 
+      x.pause(); 
+    }
+
+    const maxTemp=28,
+    minTemp =15;
+
+    let tempBox = document.getElementById("TempBox");
+    let tempValue=  Number(tempBox.value);
+
+    function addTemp() {  
+      if(maxTemp > tempValue){
+        tempValue += 1;
+        tempBox.value = tempValue;
+      }
+    }
+
+    function remTemp() {
+      if(minTemp < tempValue){
+        tempValue -= 1;
+        tempBox.value = tempValue;
+      }
+    }
+
+  </script>
+
+</body>
