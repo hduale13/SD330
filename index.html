@@ -61,6 +61,29 @@
             <p>I previously interned as a Hardware developer intern, this summer I will be an incoming UPS IT intern in the TEC dept.</p>
         </div>
     </div>
-    
+
+    <!--From Tokash resource-->
+    <script>
+	
+        function fileList(){ 
+           (async () => {
+               const response = await fetch("https://api.github.com/repos/aptokash/SD330/contents/");
+               const data = await response.json();
+           
+               let htmlString = "";
+               for (let file of data) {
+                   
+                   fname = file.name;           
+                   fpath = "https://aptokash.github.io/SD330/" + fname;  
+                   
+                   htmlString += "<p>" + fname ;
+                   htmlString += "<p>" + fpath ;
+               }
+           
+               htmlString += '</ul></div>';
+               document.getElementById('files').innerHTML = htmlString;
+           })()
+       }	
+       </script>
 
 </body>
