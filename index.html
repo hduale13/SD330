@@ -3,85 +3,124 @@
 <html>
     <head>
         <style>
+            .overall {
+                position:relative;
+                width:100%;
+            }
+            
             .header {
                 height:80px;
-                width:100%;
-                border: 2px outset rgb(0, 172, 220);
-                background-color: rgb(98, 210, 241);
+                width:999px;
+                border: 2px outset rgb(219, 215, 248);
+                background-color: rgb(0, 70, 198);
+                color:antiquewhite;
             }
-
-            .intro {
+            .container{
+                position:absolute;
+                top:10%;
+                left:28px;
                 height:400px;
-                width:200px;
-                border: 2px outset rgb(0, 172, 220);
-                background-color: rgb(174, 221, 234);
+                width:900px;
+                border: 20px outset rgb(255, 255, 255);
+                background-color: rgb(235, 235, 235);
             }
 
-            .pic {
-                height:400px;
-                width:200px;
-                top: 120px;
-                left: 300px;
-                border: 2px outset rgb(0, 172, 220);
-                background-color: rgb(98, 210, 241);
-            }
+            .topright {
+               
 
-            .left {
                 position: absolute;
+                top: 10%;
+                width: 1000%;
+                left: 60%;
+            }
+
+            .about {
+                height:350px;
+                width:300px;
+                border: 2px outset rgb(0, 172, 220);
+                background-color: rgb(207, 232, 255);
+            }
+
+            .topleft {
+                position: absolute;
+                top: 10%;
+                width: 1000%;
+                left: 10%;
+                
+            }
+
+            
+            .pic {
+                position: absolute;
+                top: 10%;
+                width: 1000%;
+                left: 36%;
+                
+                
+            }
+
+            .welcome {
                 top: 120px;
                 left: 40px;
                 height:300px;
                 width:200px;
+                
                 border: 2px outset rgb(0, 172, 220);
-                background-color: rgb(174, 221, 234);
+                background-color: rgb(207, 232, 255);
             }
 
-            .right {
-                position: absolute;
-                top: 120px;
-                right:300px;
-            }
+            
         </style>
     </head>
 </html>
 
 <body>
         <!--div 1 for header introductions-->
+    <div class="overall">
+        <div class="header">
+            <h1>Welcome to Hodo's System Design Page!</h1>
+        </div>
+        <img src="background.jpg" alt="Background" width="1000" height="900">
 
-    <div class="header">
-        <h1>Welcome to Hodo's repo webpage!</h1>
+        
+        
+        <div class="container">
+            <div class="topleft">
+                <!--Left side div-->
+                <div class="welcome">
+                    <h2>Welcome!</h2>
+                    <p>Here you can view and run all of my public projects located in my System Design repo.</p> 
+                    
+                </div>
+            </div>
+            
+    
+    
+            <div class="pic">
+                <img src="pic.jpg" height="250" width="190">
+            </div>
+                <!--div 2 for personal intro/background-->
+    
+            <div class="topright">
+                <div class="about">
+                    <h3>Background about myself!</h3>
+                    <p>I'm a current 3rd year undergrad, attending Marist College in
+                            Poughkeepsie, NY. I'm studying Comp Sci and Software development.
+                    </p>
+                    <p>I previously interned as a Hardware developer intern, this summer I will be an incoming UPS IT intern in the TEC dept. <br> 
+                    I like to play outside; specifically playing badminton, basketball, soccer, spikeball, basically anything outdoors.<br>
+                    The past two years, I've been working on building up gardens at my house, and replanting vegetables in our raised garden bed.</p>
+                    
+                </div>
+            </div>
+        </div>
+    
     </div>
     
-	
-    <!--Left side div-->
-    <div class="left">
-        <h2>Welcome!</h2>
-        <p>Here you can view and run all of my public projects located in my public repo.</p> 
-        
-    </div>
-
-
-    <div class="pic">
-        <img src="pic.jpg" height="300" width="275">
-    </div>
-
-
-    <div class="right">
-        <!--div 2 for personal intro/background-->
-        
-        <div class="intro">
-            <h3>Background about myself!</h3>
-            <p>I'm a current 3rd year undergrad, attending Marist College in
-                Poughkeepsie, NY. I'm studying Comp Sci and Software development.
-            </p>
-            <p>I previously interned as a Hardware developer intern, this summer I will be an incoming UPS IT intern in the TEC dept. <br> 
-		I like to play outside; specifically playing badminton, basketball, soccer, spikeball, basically anything outdoors.<br>
-		The past two years, I've been working on building up gardens at my house, and replanting vegetables in our raised garden bed.</p>
-        </div>
-    </div>
 
     <!--From Tokash resource-->
     <script>
+
 	
         function fileList(){ https://api.github.com/repos/hduale13/SD330/
            (async () => {
@@ -92,7 +131,7 @@
                for (let file of data) {
                    
                    fname = file.name;           
-                   fpath = "https://aptokash.github.io/SD330/" + fname;  
+                   fpath = "https://hduale13.github.io/SD330/" + fname;  
                    
                    htmlString += "<p>" + fname ;
                    htmlString += "<p>" + fpath ;
@@ -103,5 +142,8 @@
            })()
        }	
        </script>
-
+       <hr>
+    <footer>
+        <p><small>Copyright &copy H. Duale 2023</small></p>
+    </footer>
 </body>
