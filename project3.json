@@ -52,51 +52,51 @@
 
   "books": {
     "120": {
-      "isbn": "",
-      "title": "",
-      "author": "",
+      "isbn": "828374829",
+      "title": "Programming Python",
+      "author": "Mark Lutz",
       "id": "0001"
     },
 
     "220": {
-      "isbn": "",
-      "title": "",
-      "author": "",
+      "isbn": "927463920",
+      "title": "Java: A Beginner's Guide",
+      "author": "Herber Schildt",
       "id": "0002"
     },
 
     "221": {
-      "isbn": "",
-      "title": "",
-      "author": "",
+      "isbn": "283940028",
+      "title": "PHP & MySQL in Easy Steps",
+      "author": "Mike McGrath",
       "id": "0003"
     },
 
     "306": {
-      "isbn": "",
-      "title": "",
-      "author": "",
+      "isbn": "743892657",
+      "title": "Data Communications and Newtworking",
+      "author": "Behrouz Forouzan",
       "id": "0004"
     },
 
     "307": {
-      "isbn": "",
-      "title": "",
-      "author": "",
+      "isbn": "028472615",
+      "title": "Official Cert Guide",
+      "author": "Wendell Odom",
       "id": "0005"
     },
 
     "422": {
-      "isbn": "",
-      "title": "",
-      "author": "",
+      "isbn": "948376589",
+      "title": "Computer Organization and Design",
+      "author": "David Patterson",
       "id": "0006"
     },
 
     "435": {
-      "isbn": "",
-      "title": "",
-      "author": "",
+      "isbn": "657382947",
+      "title": "Data Structures and Algorithm Analysis",
+      "author": "Mark Weiss",
       "id": "0007"
     }
 
