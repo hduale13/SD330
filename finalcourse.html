@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<nav class="crumbs">
+  <img src="bookstoreLogo.jpg" alt="bookstore logo" width="150" height="50">
+  <br>
+  <ol>
+    <li class="crumb"><a href="finalProject.html"> Home</a></li>
+    <li class="crumb"><a href="finalcourse.html"> Courses</a></li>
+  </ol>
+  <div class="topnav">
+    <div class="search-container">
+      <form action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </div>
+</nav>
+<body>
+
+  <div class="header">
+    <h2>Courses</h2>
+
+  </div>
+  <ul id="coursesList"></ul>
+
+  <hr>
+</body>
+<footer>
+  <small>&copy; H. Duale 4/2023</small>
+  <small><a href="finalProject.html">Home</a></small>
+  <small><a href="finalcourse.html">Courses</a></small>
+  <small><a href="book.html">Books</a></small>
+
+</footer>
+
+<script>
+  async function getCourses() {
+    const response = await fetch("https://raw.githubusercontent.com/hduale13/SD330/main/project3.json");
+    const data = await response.json();
+  
+    let coursesList = document.getElementById("coursesList");
+  
+    for (const course in data['courses']) {
+      let courseItem = document.createElement("li");
+      let courseLink = document.createElement("a");
+      courseLink.href = "book.html?course=" + encodeURIComponent(course);
+      courseLink.textContent = course;
+      courseItem.appendChild(courseLink);
+      coursesList.appendChild(courseItem);
+    }
+  }
+  
+  getCourses();
+</script>
+
+</html>
