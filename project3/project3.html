@@ -10,11 +10,11 @@
   <script>
     async function getCourses() {
       let htmlString = "<h2>Here are the list of available courses</h2><p>";
-      const response = await fetch("https://api.github.com/hduale13/SD330/project3/project3.json");
+      const response = await fetch("https://raw.githubusercontent.com/hduale13/SD330/main/project3.json");
       const data = await response.json();
       htmlString += "<p>The file structure identifies the <b>courses</b>.</p>";
   
-      htmlString += "<p>Here are the elements of <b>courses</b>:</p>";
+      htmlString += "<p>Here are the elements of <b><a href=courses</b>:</p>";
   
       let courses = Object.keys(data['courses']); // Array for courses
   

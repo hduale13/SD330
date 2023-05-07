@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Home</h1>
+  <!-- Create buttons that link to settings, account page, and reset page -->
+
+  <script>
+    async function getCourses() {
+      const response = await fetch("https://raw.githubusercontent.com/hduale13/SD330/main/project3.json");
+      const data = await response.json();
+  
+      const courses = data['courses']; // Object containing courses
+  
+      const table = document.createElement('table');
+      const tableHead = document.createElement('thead');
+      const tableBody = document.createElement('tbody');
+  
+      // Create table header
+      const tableHeaderRow = document.createElement('tr');
+      const tableHeader1 = document.createElement('th');
+      tableHeader1.textContent = 'title';
+      const tableHeader2 = document.createElement('th');
+      tableHeader2.textContent = 'id';
+      const tableHeader3 = document.createElement('th');
+      tableHeader3.textContent = 'Professor';
+  
+      tableHeaderRow.appendChild(tableHeader1);
+      tableHeaderRow.appendChild(tableHeader2);
+      tableHeaderRow.appendChild(tableHeader3);
+  
+      tableHead.appendChild(tableHeaderRow);
+  
+      // Populate table body with course data
+      for (const course in courses) {
+        const courseData = courses[course];
+  
+        const tableRow = document.createElement('tr');
+  
+        const courseNameCell = document.createElement('td');
+        courseNameCell.textContent = course;
+  
+        const instructorCell = document.createElement('td');
+        instructorCell.textContent = courseData['Professor'];
+  
+        const idCell = document.createElement('td');
+        durationCell.textContent = courseData['id'];
+  
+        tableRow.appendChild(courseNameCell);
+        tableRow.appendChild(instructorCell);
+        tableRow.appendChild(idCell);
+  
+        tableBody.appendChild(tableRow);
+      }
+  
+      table.appendChild(tableHead);
+      table.appendChild(tableBody);
+  
+      document.body.appendChild(table);
+    }
+  
+    getCourses();
+  </script>
+
+  <hr>
+  <footer>
+    <small>&copy; H. Duale 24 April 2023</small>
+  </footer>
+</body>
+</html>
