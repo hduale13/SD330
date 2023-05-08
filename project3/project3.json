@@ -1,103 +1,103 @@
 {
   "courses": {
     "Intro to Programming": {
-      "course": "cmpt120",
-      "id": "00001",  
-      "semester": "Fall",
+      "Course": "cmpt120",
+      "ID": "00001",  
+      "Semester": "Fall",
       "Professor": "Zeppetelli"
     },
 
     "Software Development I": {
-      "course": "cmpt220",
-      "id": "00002",  
-      "semester": "Spring",
+      "Course": "cmpt220",
+      "ID": "00002",  
+      "Semester": "Spring",
       "Professor": "Arias"
     },
 
     "Software Development II": {
-      "course": "cmpt221",
-      "id": "00003",  
-      "semester": "Fall",
+      "Course": "cmpt221",
+      "ID": "00003",  
+      "Semester": "Fall",
       "Professor": "Tokash"
     },
 
     "Data Communications": {
-      "course": "cmpt306",
-      "id": "00004",  
-      "semester": "Fall & Spring",
+      "Course": "cmpt306",
+      "ID": "00004",  
+      "Semester": "Fall & Spring",
       "Professor": "Bowu"
     },
 
     "Internetworking": {
-      "title": "cmpt307",
-      "id": "00005",  
-      "semester": "Fall & Spring",
+      "Course": "cmpt307",
+      "ID": "00005",  
+      "Semester": "Fall & Spring",
       "Professor": "Cannistra"
     },
 
     "Computer Organization & Architecture": {
-      "course": "cmpt422",
-      "id": "00006",  
-      "semester": "Fall",
+      "Course": "cmpt422",
+      "ID": "00006",  
+      "Semester": "Fall",
       "Professor": "Gormanly"
     },
 
     "Algorithm Analysis & Design": {
-      "course": "cmpt435",
-      "id": "00007",  
-      "semester": "Spring",
+      "Course": "cmpt435",
+      "ID": "00007",  
+      "Semester": "Spring",
       "Professor": "Johnson"
     }
   },
 
   "books": {
     "Intro to Programming": {
-      "isbn": "828374829",
-      "title": "Programming Python",
-      "author": "Mark Lutz",
+      "Isbn": "828374829",
+      "Title": "'Programming Python'",
+      "Author": "Mark Lutz",
       "id": "0001"
     },
 
     "Software Development I": {
-      "isbn": "927463920",
-      "title": "Java: A Beginner's Guide",
-      "author": "Herber Schildt",
-      "id": "0002"
+      "Isbn": "927463920",
+      "Title": "'Java: A Beginner's Guide'",
+      "Author": "Herber Schildt",
+      "Id": "0002"
     },
 
     "Software Development II": {
-      "isbn": "283940028",
-      "title": "PHP & MySQL in Easy Steps",
-      "author": "Mike McGrath",
-      "id": "0003"
+      "Isbn": "283940028",
+      "Title": "'PHP & MySQL in Easy Steps'",
+      "Author": "Mike McGrath",
+      "Id": "0003"
     },
 
     "Data Communications": {
-      "isbn": "743892657",
-      "title": "Data Communications and Newtworking",
-      "author": "Behrouz Forouzan",
-      "id": "0004"
+      "Isbn": "743892657",
+      "Title": "'Data Communications and Newtworking'",
+      "Author": "Behrouz Forouzan",
+      "Id": "0004"
     },
 
     "Internetworking": {
-      "isbn": "028472615",
-      "title": "Official Cert Guide",
-      "author": "Wendell Odom",
-      "id": "0005"
+      "Isbn": "028472615",
+      "Title": "'Official Cert Guide'",
+      "Author": "Wendell Odom",
+      "Id": "0005"
     },
 
     "Computer Organization & Architecture": {
-      "isbn": "948376589",
-      "title": "Computer Organization and Design",
-      "author": "David Patterson",
-      "id": "0006"
+      "Isbn": "948376589",
+      "Title": "'Computer Organization and Design'",
+      "Author": "David Patterson",
+      "Id": "0006"
     },
 
     "Algorithm Analysis & Design": {
-      "isbn": "657382947",
-      "title": "Data Structures and Algorithm Analysis",
-      "author": "Mark Weiss",
-      "id": "0007"
+      "Isbn": "657382947",
+      "Title": "'Data Structures and Algorithm Analysis'",
+      "Author": "Mark Weiss",
+      "Id": "0007"
     }
 
   }
