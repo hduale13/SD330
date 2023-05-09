@@ -74,12 +74,15 @@ button {
 .crumbs ol {
   list-style-type: none;
   padding-left: 0;
+  text-decoration: none;
+
 }
 
 .crumb {
   display: inline-block;
   background-color: rgb(255, 255, 255);
   border-style: outset;
+  text-decoration: none;
 
 
 
@@ -92,6 +95,8 @@ button {
   font-size: 80%;
   font-weight: bold;
   padding: 0 3px;
+  text-decoration: none;
+
 }
 
 .topnav a {
