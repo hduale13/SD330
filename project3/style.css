@@ -148,13 +148,14 @@ button {
 }
 .images {
   position: absolute;
-  right: 50px;
+  float: right;
   top: 250px;
+  right: 50px;
 
 }
 
 #coursesList {
-  margin-left:50x;
+  float:left; 
   font-size: 20px;
 }
 
