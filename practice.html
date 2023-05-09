@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<nav class="crumbs">
+  <img src="bookstoreLogo.jpg" alt="bookstore logo" width="150" height="50">
+  <br>
+  <ol>
+    <li class="crumb"><a href="finalProject.html"> Home</a></li>
+    <li class="crumb"><a href="finalcourse.html"> Courses</a></li>
+  </ol>
+  <div class="topnav">
+    <div class="search-container">
+      <form action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+        <button class="btn"><i class="fa fa-home"></i></button>
+
+      </form>
+    </div>
+  </div>
+</nav>
+<body>
+
+  <div class="header">
+    <h2>Courses</h2>
+
+  </div>
+  <ul id="coursesList">
+    <!-- <li id="course"></li>
+    <li id="Professor"></li>
+    <li id="semester"></li> -->
+
+  </ul>
+
+  <hr>
+</body>
+<footer>
+  <small>&copy; H. Duale 4/2023</small>
+  <small><a href="finalProject.html">Home</a></small>
+  <small><a href="finalcourse.html">Courses</a></small>
+  <small><a href="book.html">Books</a></small>
+
+</footer>
+
+<script>
+  async function getCourses() {
+    const response = await fetch("https://raw.githubusercontent.com/hduale13/SD330/main/project3/project3.json");
+    const data = await response.json();
+
+    console.log(data);
+  
+    let coursesList = document.getElementById("coursesList");
+    // let course = document.getElementById("course");
+    // let Professor = document.getElementById("Professor");
+    // let semester = document.getElementById("semester");
+
+
+  
+    for (const course in data['courses']) {
+      let courseItem = document.createElement("li");
+      let courseLink = document.createElement("a");
+      courseLink.href = "book.html?course=" + encodeURIComponent(course);
+      courseLink.textContent = course;
+      courseItem.appendChild(courseLink);
+      coursesList.appendChild(courseItem);
+    }
+  }
+  
+  getCourses();
+</script>
+
+</html>
+
+
+<!-- book.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<nav class="crumbs">
+  <img src="bookstoreLogo.jpg" alt="bookstore logo" width="150" height="50">
+  <br>
+  <ol>
+    <li class="crumb"><a href="finalProject.html"> Home</a></li>
+    <li class="crumb"><a href="finalcourse.html"> Courses</a></li>
+    <li class="crumb"><a href="book.html"> Books</a></li>
+  </ol>
+  <div class="topnav">
+    <div class="search-container">
+      <form action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+        <button class="btn"><i class="fa fa-home"></i></button>
+
+      </form>
+    </div>
+  </div>
+</nav>
+<body>
+
+  <div class="header">
+    <h2>Book Details</h2>
+
+  </div>
+  <div id="bookDetails"></div>
+
+  <hr>
+</body>
+<footer>
+  <small>&copy; H. Duale 4/2023</small>
+  <small><a href="finalProject.html">Home</a></small>
+  <small><a href="finalcourse.html">Courses</a></small>
+  <small><a href="book.html">Books</a></small>
+</footer>
+
+<script>
+  async function getBookDetails() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const course = urlParams.get('course');
+  
+    if (course) {
+      const response = await fetch("https://raw.githubusercontent.com/hduale13/SD330/main/project3.json");
+      const data = await response.json();
+  
+      const book = data.books[course];
+  
+      let bookDetails = document.getElementById("bookDetails");
+      let bookList = document.createElement("ul");
+  
+      for (const key in book) {
+        let bookListItem = document.createElement("li");
+        bookListItem.innerHTML = "<b>" + key + ":</b> " + book[key];
+        bookList.appendChild(bookListItem);
+      }
+  
+      bookDetails.appendChild(bookList);
+    }
+  }
+  
+  getBookDetails();
+</script>
+
+</html>
+
